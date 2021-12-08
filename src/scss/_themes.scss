@@ -3,7 +3,7 @@
 
 @include mat.core();
 
-$z-theme: mat.define-dark-theme(
+$theme: mat.define-dark-theme(
     (
         color: (
             primary: v.$primary,

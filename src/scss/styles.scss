@@ -1,4 +1,4 @@
-@use 'mixins' as m;
+@use 'themes';
 @use 'variables' as v;
 @use '@angular/material' as mat;
 
@@ -6,7 +6,7 @@ html,
 body {
   height: 100%;
   width: 100vw;
-  @include mat.core-theme(m.$z-theme);
+  @include mat.core-theme(themes.$theme);
 }
 
 body {
