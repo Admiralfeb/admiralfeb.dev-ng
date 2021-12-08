@@ -1,0 +1,14 @@
+@use "@angular/material" as mat;
+@use "variables" as v;
+
+@include mat.core();
+
+$z-theme: mat.define-dark-theme(
+    (
+        color: (
+            primary: v.$primary,
+            accent: v.$accent,
+            warn: v.$warn,
+        ),
+    )
+);
