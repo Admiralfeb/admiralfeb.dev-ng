@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@admiralfeb/dining-selector": "^1.0.5",
     "@angular/animations": "~13.0.3",
     "@angular/cdk": "^13.0.3",
     "@angular/common": "~13.0.3",

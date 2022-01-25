@@ -1,1 +1,19 @@
-<p>dining-selector works!</p>
+<div class="dining-selector jumbotron">
+  <h4>Dining Selector</h4>
+  <div>
+    <ul>
+      <li *ngFor="let option of options">
+        {{option}}
+        <button mat-icon-button (click)="deleteOption(option)"><span class="material-icons">delete</span></button>
+      </li>
+    </ul>
+    <input [(ngModel)]="optionToAdd" placeholder="Add Option">
+    <button mat-button (click)="addOption()">Add</button>
+    <div *ngIf="selectedOption">Selected Option: {{ selectedOption }}</div>
+    <div *ngIf="error">Error: {{ error }}</div>
+    <button mat-button (click)="selectOption()">Select</button>
+    <button mat-button (click)="resetOptions()" class="reset-button">
+      Reset
+    </button>
+  </div>
+</div>
