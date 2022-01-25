@@ -16,7 +16,6 @@ import { SharedModule } from './modules/shared/shared.module';
     SharedModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'code', loadChildren: () => import('./modules/code/code.module').then((m) => m.CodeModule) },
       { path: '**', component: NotFoundComponent },
     ]),
   ],

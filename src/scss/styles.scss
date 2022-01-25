@@ -1,77 +1,123 @@
-@use 'themes';
-@use 'variables' as v;
-@use '@angular/material' as mat;
-
-html,
-body {
-  height: 100%;
-  width: 100vw;
-  @include mat.core-theme(themes.$theme);
+:root {
+  --bg-color: #303030;
+  --bg-color-raised: #404040;
+  --primary: rgb(163, 73, 164);
 }
 
 body {
-  margin: 0;
+  height: 100%;
+  width: 100%;
   padding: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Roboto, Helvetica, sans-serif;
+  color: white;
+  background-image: url('../assets/img/Keeper.jpg');
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-attachment: fixed;
 }
 
 a {
-  color: mat.get-color-from-palette(v.$primary, 300);
-  border-radius: 5px;
+  text-decoration: none;
+  color: var(--primary);
 }
 a:hover {
+  text-decoration: underline;
   color: white;
-  background-color: mat.get-color-from-palette(v.$primary, 500);
 }
 
-h1 {
+button {
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+[mat-button] {
+  background-color: var(--primary);
+  box-sizing: border-box;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* white-space: nowrap; */
   margin: 0;
+  min-width: 70px;
+  line-height: 36px;
+  border-radius: 4px;
+  overflow: visible;
+  word-wrap: normal;
+  text-align: center;
+  font-weight: 500;
+}
+[mat-icon-button] {
+  background-color: transparent;
+  padding: 0;
+  min-width: 0;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  line-height: 36px;
+  border-radius: 50%;
+  text-align: center;
 }
 
-.hamburger {
-  cursor: pointer;
-  margin: 0 auto;
-}
-
-.md-24 {
-  font-size: 24px;
-}
-
-.md-36 {
-  font-size: 36px;
-}
-
-.md-48 {
-  font-size: 48px;
-}
-
-.navbar a.active,
-.nav a.active {
-  background-color: v.$brand-color;
-  color: white;
-}
-
-.navbar a:hover,
-.nav a:hover {
-  background-color: #ddd;
-  color: black;
-  cursor: pointer;
-}
-
-.nav .linktext,
-.navbar .linkText {
-  background-color: #333;
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-decoration: none !important;
-  font-size: 17px;
+@media screen and (min-width: 640px) {
+  [mat-button] {
+    white-space: nowrap;
+    padding: 0 16px;
+  }
 }
 
 .jumbotron {
-  background-color: #303030 !important;
+  background-color: var(--bg-color-raised);
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
-
 .text-center {
   text-align: center;
+}
+.fill {
+  flex-grow: 1;
+}
+
+/* Rules for sizing the icon. */
+.material-icons {
+  vertical-align: middle;
+}
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
 }
