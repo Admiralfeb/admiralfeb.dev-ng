@@ -15,6 +15,6 @@ export class ServerService {
   constructor(private http: HttpClient) {}
 
   getData = <T>(path: string) => {
-    return this.http.get<T>(`${apiUrl}/path`, clientOptions);
+    return this.http.get<T>(`${apiUrl}/path`, clientOptions).to;
   };
 }
