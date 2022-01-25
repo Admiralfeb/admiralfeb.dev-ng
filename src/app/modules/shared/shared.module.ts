@@ -10,6 +10,5 @@ import { ServerService } from './server.service';
   declarations: [UnderConstructionComponent, LoaderComponent, NotFoundComponent],
   imports: [CommonModule, HttpClientModule],
   exports: [UnderConstructionComponent, NotFoundComponent, LoaderComponent],
-  providers: [ServerService],
 })
 export class SharedModule {}

@@ -7,7 +7,7 @@ import { ResumeService } from './resume.service';
 
 @NgModule({
   declarations: [ResumeComponent, ResumeDataComponent],
+  exports: [ResumeComponent],
   imports: [CommonModule, SharedModule],
-  providers: [ResumeService],
 })
 export class ResumeModule {}
