@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProjectsRoutingModule } from './modules/projects/projects-routing.module';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { ResumeModule } from './modules/resume/resume.module';
 import { ResumeComponent } from './modules/resume/resume/resume.component';
@@ -18,10 +19,13 @@ import { SharedModule } from './modules/shared/shared.module';
     BrowserAnimationsModule,
     SharedModule,
     ResumeModule,
-    ProjectsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'resume', component: ResumeComponent },
+      {
+        path: 'projects',
+        loadChildren: () => import('./modules/projects/projects.module').then((m) => m.ProjectsModule),
+      },
       { path: '**', component: NotFoundComponent },
     ]),
   ],

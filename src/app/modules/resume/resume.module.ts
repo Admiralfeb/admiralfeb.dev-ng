@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResumeComponent } from './resume/resume.component';
-import { ResumeDataComponent } from './resume-data/resume-data.component';
+import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
-import { ResumeService } from './resume.service';
+import { ResumeDataComponent } from './resume-data/resume-data.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [ResumeComponent, ResumeDataComponent],

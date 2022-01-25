@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { NgModule } from '@angular/core';
+import { DiningSelectorComponent } from './components/dining-selector/dining-selector.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectsRoutingModule } from './projects-routing.module';
+import { ProjectComponent } from './components/project/project.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [ProjectsComponent, DiningSelectorComponent, ProjectComponent],
+  imports: [CommonModule, SharedModule, ProjectsRoutingModule],
 })
-export class ProjectsModule { }
+export class ProjectsModule {}

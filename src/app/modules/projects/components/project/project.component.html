@@ -1,0 +1,15 @@
+<div class="project-header">
+  <h3 class="title">{{ project.name }}</h3>
+  <div class="fill"></div>
+  <a mat-button [href]="project.url" *ngIf="!isLocalProject;else localLink">Project URL</a>
+  <ng-template #localLink>
+    <a mat-button [routerLink]="project.url" #localProject>Project URL</a>
+  </ng-template>
+  <a mat-button [href]="project.gitUrl">Git URL</a>
+</div>
+<p>{{ project.description }}</p>
+<h4>Technologies Used:</h4>
+<ul>
+  <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+</ul>
+<hr />

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2 class="text-center">Zachary's Projects</h2>
+  <div class="jumbotron">
+    <div class="projects" *ngIf="projects.length > 0; else elseBlock">
+      <af-project *ngFor="let project of projects" [project]="project"></af-project>
+      <af-project [project]="diningProject" [isLocalProject]="true"></af-project>
+    </div>
+    <ng-template #elseBlock>
+      <af-loader></af-loader>
+    </ng-template>
+  </div>
+</div>
